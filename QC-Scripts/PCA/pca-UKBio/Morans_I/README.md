@@ -6,8 +6,8 @@ https://github.com/cgbycroft/UK_biobank/blob/master/QC-Scripts/R/scripts/compute
 
 ### Details of the statistics
 
-![image](https://user-images.githubusercontent.com/27725771/126153401-1cdd5659-5227-41fc-afe6-6af2abd4ef1c.png)
-![image](https://user-images.githubusercontent.com/27725771/126153494-0b9ec9fa-c10b-464a-a463-fa24e50c6fd8.png)
+![image](https://user-images.githubusercontent.com/27725771/126153401-1cdd5659-5227-41fc-afe6-6af2abd4ef1c.png | width=100)
+![image](https://user-images.githubusercontent.com/27725771/126153494-0b9ec9fa-c10b-464a-a463-fa24e50c6fd8.png | width=100)
 
 
 # Figures #
