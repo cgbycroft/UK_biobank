@@ -1,7 +1,7 @@
 #############
 # Function to compute Moran's I statistic on some mapped continous variable
 #############
-# For an example usage see: https://github.com/cgbycroft/UK_biobank/blob/master/QC-Scripts/PCA/pca-UKBio/run-Moran-Null.R#L190
+# For an example usage see: https://github.com/cgbycroft/UK_biobank/blob/master/QC-Scripts/PCA/pca-UKBio/Morans_I/run-Moran-Null.R#L190
 
 # Inputs to the main work-horse function myMoran() : 
 # A data frame with x,y coordinates of spatial locations, or a SpatialGridDataFrame object from whcih this can be extracted.
