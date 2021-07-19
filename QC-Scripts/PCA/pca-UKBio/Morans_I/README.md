@@ -1,9 +1,10 @@
 
 # Computing Moran's I for UK Biobank genetic principal components (PCs) #
 
-## The primary function that implements this is here:
+### The primary function that calculates this statistic is here - see comments for input/output details:
 https://github.com/cgbycroft/UK_biobank/blob/master/QC-Scripts/R/scripts/compute-Moran.R
 
+### Details of the statistics
 
 ![image](https://user-images.githubusercontent.com/27725771/126153401-1cdd5659-5227-41fc-afe6-6af2abd4ef1c.png)
 ![image](https://user-images.githubusercontent.com/27725771/126153494-0b9ec9fa-c10b-464a-a463-fa24e50c6fd8.png)
