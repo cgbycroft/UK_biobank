@@ -1,10 +1,10 @@
-# Computing Moran's I for UK Biobank PCs #
+# Computing Moran's I for UK Biobank genetic principal components (PCs) #
 
 ![image](https://user-images.githubusercontent.com/27725771/126153401-1cdd5659-5227-41fc-afe6-6af2abd4ef1c.png)
 ![image](https://user-images.githubusercontent.com/27725771/126153494-0b9ec9fa-c10b-464a-a463-fa24e50c6fd8.png)
 
 
-# Illustrative examples #
+# Figures #
 
 ![image](https://user-images.githubusercontent.com/27725771/126153582-954da4ec-c1b2-48cc-a638-ed3c5ee1d3b9.png)
 
