@@ -5,5 +5,5 @@
 #$ -cwd
 #$ -V
 #$ -t 1-40
-Rscript /well/ukbiobank/qcoutput.V2_QCed.sample-QC/QC-Scripts/PCA/pca-UKBio/run-Moran-Null.R $SGE_TASK_ID 10000 200
+Rscript /well/ukbiobank/qcoutput.V2_QCed.sample-QC/QC-Scripts/PCA/pca-UKBio/Morans_I/run-Moran-Null.R $SGE_TASK_ID 10000 200
 
