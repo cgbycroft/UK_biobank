@@ -1,12 +1,27 @@
 #############
-# Function to compute Moran's i statistic on som emapped continous variable
+# Function to compute Moran's I statistic on some mapped continous variable
 #############
+# For an example usage see: https://github.com/cgbycroft/UK_biobank/blob/master/QC-Scripts/PCA/pca-UKBio/run-Moran-Null.R#L190
+
+# Inputs to the main work-horse function myMoran() : 
+# A data frame with x,y coordinates of spatial locations, or a SpatialGridDataFrame object from whcih this can be extracted.
+# A vector of values (e.g. PC scores) corresponding to each of the locations.
+# A list weights (wij) for each pair of coordinates. Optionally this can be derived from the coordinates using the getWeights() function.
+
+# Outputs:
+# A list object with two elements: 
+# 1. Results from the moran.test() function; 
+# 2. (optionally) a plotting object that can be printed to create a figure.
+
 
 #install.packages("~/well/ukbiobank/qcoutput.V2_QCed.sample-QC/QC-Scripts/R/spdep_0.6-13.tar.gz",repos=NULL,type="source")
 # Installed some dependencies from source files.
 
 library(spdep)
+# The moran.test() function comes from the "spdep" R package (https://rdrr.io/cran/spdep/man/moran.test.html)
 
+
+# Function to create a spatial grid object from a map with point coordinates (useful for aggregating values of points falling within x-Km grid squares).
 getSpatialGrid <- function(myMap,cellSize,extent=NULL){
     
     print("Making spatial grid object...")
@@ -39,6 +54,7 @@ getSpatialGrid <- function(myMap,cellSize,extent=NULL){
 }
     
 
+# calculating mean values of points falling within each grid-square
 gridMeans <- function(coords,values,mySpatialGrid){
 
     myValuesPoints = SpatialPointsDataFrame(coords, as.data.frame(values), coords.nrs = numeric(0), proj4string = CRS(proj4string(mySpatialGrid)),bbox = NULL)
@@ -51,6 +67,7 @@ gridMeans <- function(coords,values,mySpatialGrid){
 }
 
 
+# Calculate pairwise distance weights for pairs of points (or grid-squares) using different methods to measure distance
 getWeights <- function(myMap,agg,NotintheseaOrNA,method="nearestNeighbours",nNeighbours=NULL,sdGaussian=NULL){
     
                                         # get distance between centres of the grid. These determine the weights of the moran statistic
@@ -118,7 +135,7 @@ getWeights <- function(myMap,agg,NotintheseaOrNA,method="nearestNeighbours",nNei
 }
 
 
-
+# Main function to calculate Moran's I statistic
 myMoran <- function( myMap=uk0,values,coords,mySpatialGrid=NULL,agg=NULL,cellSize=10000,colors=magma,baseMap,nNeighbours=NULL,weightsList=NULL,makeMap=TRUE){
     
 # NOTE: cellSize is in the units of the map (e.g meters)
