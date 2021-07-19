@@ -6,7 +6,7 @@
 # Inputs to the main work-horse function myMoran() : 
 # A data frame with x,y coordinates of spatial locations, or a SpatialGridDataFrame object from whcih this can be extracted.
 # A vector of values (e.g. PC scores) corresponding to each of the locations.
-# A list weights (wij) for each pair of coordinates. Optionally this can be derived from the coordinates using the getWeights() function.
+# A list object with weights (wij) for each pair of coordinates. Optionally this can be derived from the coordinates using the getWeights() function.
 
 # Outputs:
 # A list object with two elements: 
